@@ -1,11 +1,12 @@
-<p>
-<strong>名称 :</strong>
-<%= @task.title %>
-</p>
+<div class="container">
+         <p>
+         <strong>タスク :</strong>
+         <%= @task.title %>
+         </p>
 
-<p>
-<strong>詳しい説明 :</strong>
-<%= @task.content %>
-</p>
-
-<%= link_to '戻る',tasks_path %>
+         <p>
+         <strong>詳しい説明 :</strong>
+         <%= @task.content %>
+         </p>
+         <%= link_to '一覧に戻る',tasks_path %>
+</div>

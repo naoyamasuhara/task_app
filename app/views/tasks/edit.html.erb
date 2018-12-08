@@ -1,6 +1,6 @@
 <h1>タスクを編集する</h1>
 
-<%= form_for :task, url: tasks_path(@task),method: :patch do |f| %>
+<%= form_for(@task) do |f| %>
     <p>
          <%= f.label :名称 %><br>
          <%= f.text_field :title %>
@@ -12,8 +12,8 @@
    </p>
    
    <p>
-     <%= f.submit %>
+     <%= button_tag "更新する", class: 'btn btn-danger' %>
    </p>
 <% end %>
 
-<%= link_to '戻る',tasks_path %>
+<%= link_to '一覧に戻る',tasks_path %>
