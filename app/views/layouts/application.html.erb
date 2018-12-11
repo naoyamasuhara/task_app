@@ -9,8 +9,23 @@
   </head>
 
   <body>
-   <div class="container">
+    <header>
+      <p class="text-left">Taskleaf</p>
+      <p></p>
+    </header>
+    <div class="container">
       <%= yield %>
-   </div>
+    </div>
   </body>
 </html>
+
+<style>
+.text-left{
+  font-size: 20px;
+  color: white;
+  background-color: black;
+  padding-top: 18px;
+  margin-bottom: 0px;
+  height: 65px;
+}
+</style>
