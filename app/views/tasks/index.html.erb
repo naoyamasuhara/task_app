@@ -10,10 +10,13 @@
   </div>
 <% end %>
 
-<%= link_to '一括削除', destroy_all_tasks_path, method: :delete, data: { confirm: '全て削除します。よろしいですか？' }, class: 'btn btn-danger' %>
+
 <div class="container-fluid">
   <h1>タスク一覧</h1>
-  <%= link_to '新規登録',new_task_path, class:"btn btn-primary" %>
+  <div class="task__index-button">
+    <%= link_to '新規登録',new_task_path, class:"btn btn-primary" %>　
+    <%= link_to '一括削除', destroy_all_tasks_path, method: :delete, data: { confirm: '全て削除します。よろしいですか？' }, class: 'btn btn-danger' %>
+  </div>
   <p></p>
     <table class="table table-border-bottom table-hover">
       <tr>
