@@ -13,7 +13,10 @@
       <div class="header-menu">
         Taskleaf
         <% if user_signed_in? %>
-          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+          <div class="header-login">
+            <%= link_to "一覧へ戻る", tasks_path %>　
+            <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+          </div>
         <% else %>
           <div class="header-login">
             <%= link_to '新規登録', new_user_registration_path %>　
