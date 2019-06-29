@@ -4,7 +4,13 @@
   </div>
 <% end %>
 
-<h1>タスク詳細</h1>
+<div class="tasks__show-title">
+  <h1>タスク詳細</h1>
+  <div class="tasks__show-button">
+    <%= link_to '編集',edit_task_path(@task), class:"btn btn-primary" %>　 
+    <%= link_to '削除',task_path(@task), method: :delete, data: { confirm: '本当に削除しますか？' },class:"btn btn-danger" %>
+  </div>
+</div>
 
 <table class="table table-border-bottom">
   <tr>
@@ -15,7 +21,3 @@
     <th>詳しい説明</th><td><%= simple_format(@task.content) %></td>
   </tr>
 </table>
-<div class="tasks__show-button">
-  <%= link_to '編集',edit_task_path(@task), class:"btn btn-primary" %>　 
-  <%= link_to '削除',task_path(@task), method: :delete, data: { confirm: '本当に削除しますか？' },class:"btn btn-danger" %>
-</div>
