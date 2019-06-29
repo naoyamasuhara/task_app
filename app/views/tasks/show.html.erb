@@ -8,11 +8,11 @@
 
 <table class="table table-border-bottom">
   <tr>
-    <th>名称</th>
+    <th>タイトル</th>
     <td><%= @task.title %></td>
   </tr>
   <tr>
-    <th>詳しい説明</th><td><%= @task.content %></td>
+    <th>詳しい説明</th><td><%= simple_format(@task.content) %></td>
   </tr>
 </table>
 <div class="tasks__show-button">
