@@ -10,8 +10,13 @@
   </div>
 <% end %>
 
-
-<div class="container-field">
+<div class="container">
+  <% if current_user.id == 1 %>
+    <h3 class="tasks__index-info">
+      タスク名を見たいときはリンクをクリックして下さい。　また戻るときは黒いところの一覧へ戻るをクリックして下さい。<br>
+      それ以外は触らないようにお願いします。
+    </h3>
+  <% end %>
   <div class="tasks__index-title">
     <h1>タスク一覧</h1>
     <div class="tasks__index-button">
