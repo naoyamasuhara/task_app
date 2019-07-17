@@ -1,3 +1,7 @@
 @import "bootstrap";
 @import "header";
 @import "tasks";
+
+.container::before, .container::after {
+  content: none;
+}
