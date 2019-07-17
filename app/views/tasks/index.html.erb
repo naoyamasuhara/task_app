@@ -35,7 +35,7 @@
             </div>
             <div class="card-body tasks__index-card-content">
               <p class="card-text">
-                <%= truncate(task.content, length: 15) %>
+                <%= truncate(task.content, length: 40) %>
               </p>
               <div class="tasks__index-card-info">
                 <%= link_to '詳細', task_path(task), class:"btn btn-primary" %>
